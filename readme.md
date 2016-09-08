@@ -4,6 +4,13 @@ Browser extension for tachyons-debug.
 
 ![unspecified](https://cloud.githubusercontent.com/assets/1424573/18359165/dc0b0bd6-75b5-11e6-97b9-bbada98bae01.png)
 
+## Installation
+
+Install the chrome plugin [here]().
+
+When you would like to see the debug layout, click the icon.
+To remove it, refresh the page.
+
 ## Related
 
 - <http://tachyons.io/docs/debug-grid/>
