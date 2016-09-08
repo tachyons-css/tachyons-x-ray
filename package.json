@@ -8,13 +8,10 @@
     "index.js"
   ],
   "scripts": {
-    "test": "ava"
   },
   "repository": "johnotander/tachyons-debug-browser",
   "keywords": [],
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {
-    "ava": "*"
-  }
+  "devDependencies": {}
 }
