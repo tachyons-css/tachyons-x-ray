@@ -1,5 +1,5 @@
 {
-  "name": "tachyons-debug-browser",
+  "name": "tachyons-x-ray",
   "description": "Browser extension for tachyons-debug",
   "author": "John Otander",
   "version": "0.1.0",
@@ -9,7 +9,7 @@
   ],
   "scripts": {
   },
-  "repository": "johnotander/tachyons-debug-browser",
+  "repository": "johnotander/tachyons-x-ray",
   "keywords": [],
   "license": "MIT",
   "dependencies": {},

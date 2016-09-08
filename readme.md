@@ -1,4 +1,4 @@
-# ⊞ [tachyons-debug](http://tachyons.io/docs/debug-grid/)-browser
+# ⊞ [tachyons-x-ray](http://tachyons.io/docs/debug-grid/)
 
 Browser extension for tachyons-debug.
 
