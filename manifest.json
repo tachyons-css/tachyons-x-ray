@@ -3,7 +3,7 @@
 
   "name": "tachyons-x-ray",
   "description": "Browser extension for tachyons-debug",
-  "version": "1.0.2",
+  "version": "1.0.3",
 
   "background": {
     "persistent": false,
