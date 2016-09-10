@@ -48,17 +48,23 @@ chrome.browserAction.onClicked.addListener(tab => {
 
           // Create options list and styles for it
           const optionsList = document.createElement('ul')
-          optionsList.style = 'background-color: #fff !important; outline: none !important; margin: 0; list-style-type: none; padding: 0; border-radius: 3px; border: 1px solid #444; display: inline-block; font-family: monospace; font-size: 12px; position: fixed; top: 48px; right: 48px; overflow: hidden; display: none;'
+          optionsList.style = 'background-color: #fff !important; outline: none !important; margin: 0; list-style-type: none; padding: 0; border-radius: 3px; border: 1px solid #444; font-family: monospace; font-size: 12px; position: fixed; top: 48px; right: 48px; overflow: hidden;'
 
           const options = ['alpha 8', 'solid 8', 'alpha 16', 'solid 16']
           options.forEach((opt, idx) => {
             const option = document.createElement('li')
             option.appendChild(document.createTextNode(opt))
-            const border = idx !== 3 ? 'border-bottom: 1px solid #444' : '';
-            option.style = 'background-color: #fff !important; outline: none !important; padding: 4px 8px; cursor: pointer; line-height: 1;' + border
+            option.style = 'background-color: #fff !important; outline: none !important; padding: 4px 8px; cursor: pointer; line-height: 1; border-bottom: 1px solid #444'
             option.onclick = selectGrid(opt.replace(/ /g, ''))
             optionsList.appendChild(option)
           })
+
+          // Create the option to toggle element grid
+          const option = document.createElement('li')
+          option.appendChild(document.createTextNode('Toggle Element Grid'))
+          option.style = 'background-color: #fff !important; outline: none !important; padding: 4px 8px; cursor: pointer; line-height: 1;'
+          option.onclick = toggleDebugRules
+          optionsList.appendChild(option)
 
           document.body.appendChild(optionsList)
 
@@ -164,11 +170,25 @@ chrome.browserAction.onClicked.addListener(tab => {
             'wbr { outline: 1px solid !important; }'
           ]
 
-          debugRules.forEach(r => style.sheet.insertRule(r, style.sheet.cssRules.length))
+          debugRulesVisible = false;
+          toggleDebugRules()
+
+          function toggleDebugRules() {
+            if (!debugRulesVisible) {
+              debugRules.forEach(r =>
+                style.sheet.insertRule(r, style.sheet.cssRules.length))
+              debugRulesVisible = true
+            } else {
+              debugRules.forEach((_, idx) =>
+                style.sheet.deleteRule(style.sheet.cssRules.length - 1))
+              debugRulesVisible = false
+            }
+            toggleOptionsList()
+          }
 
           function toggleOptionsList() {
             optionsList.style.display = (
-              optionsList.style.display === 'block' ? 'none' : 'block'
+              optionsList.style.display === 'none' ? 'block' : 'none'
             )
           }
 
