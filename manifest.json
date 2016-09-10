@@ -20,6 +20,6 @@
   "content_security_policy": "object-src 'self' https://raw.githubusercontent.com/tachyons-css/tachyons-css.github.io/master/img/; script-src 'self'",
 
   "permissions": [
-    "activeTab", "tabs"
+    "activeTab"
   ]
 }
