@@ -35,7 +35,7 @@ chrome.browserAction.onClicked.addListener(tab => {
           style.sheet.insertRule(superSpecificHammerTime, style.sheet.cssRules.length)
 
           // Create the menu and styles for it
-          style.sheet.insertRule("#tachyons-x-ray-menu { display: inline-block; position: fixed; top: 16px; right: 16px; width: 32px; height: 32px; font-size: 16px; line-height: 32px; border-radius: 50%; box-shadow: 0 0 16px #666; text-align: center; cursor: pointer; color: #444; }", style.sheet.cssRules.length)
+          style.sheet.insertRule("#tachyons-x-ray-menu { display: inline-block; position: fixed; top: 16px; right: 16px; width: 32px; height: 32px; font-size: 16px; line-height: 32px; border-radius: 50%; box-shadow: 0 0 16px #666; text-align: center; cursor: pointer; color: #444; z-index: 2147483647; }", style.sheet.cssRules.length)
 
           style.sheet.insertRule("#tachyons-x-ray-menu:hover { box-shadow: 0 0 16px #0074D9; }", style.sheet.cssRules.length)
 
