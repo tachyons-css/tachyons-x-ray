@@ -1,24 +1,18 @@
 {
   "manifest_version": 2,
-
   "name": "tachyons-x-ray",
   "description": "Browser extension for tachyons-debug",
-  "version": "1.2.0",
-
+  "version": "1.2.1",
   "background": {
     "persistent": false,
     "scripts": ["index.js"]
   },
-
   "browser_action": {
     "default_icon": {
       "19": "icons/icon19x.png",
       "38": "icons/icon38x.png"
    }
   },
-
-  "content_security_policy": "object-src 'self' https://raw.githubusercontent.com/tachyons-css/tachyons-css.github.io/master/img/; script-src 'self'",
-
   "permissions": [
     "activeTab"
   ]
