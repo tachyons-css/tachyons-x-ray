@@ -11,7 +11,9 @@ Browser extension for tachyons-debug.
 Install the chrome plugin [here](https://chrome.google.com/webstore/detail/tachyons-x-ray/lbepbkiknibiobnbanhggglkmpkbdiim).
 
 When you would like to see the debug layout, click the icon.
-To remove it, refresh the page.
+To remove it, click the icon again.
+
+There's also a menu to select the grid type and to toggle on the additional element grid.
 
 ## Related
 
