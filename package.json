@@ -12,5 +12,7 @@
   "keywords": [],
   "license": "MIT",
   "dependencies": {},
-  "devDependencies": {}
+  "devDependencies": {
+    "tachyons-cli": "^1.0.9"
+  }
 }
